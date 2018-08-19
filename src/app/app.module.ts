@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MovieUserPageComponent } from './movie-user-page/movie-user-page.component';
 import { MovieAdminPageComponent } from './movie-admin-page/movie-admin-page.component';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatToolbarModule, MatSlideToggleModule } from '@angular/material';
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -16,6 +16,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 		BrowserModule,
 		BrowserAnimationsModule,
 		MatToolbarModule,
+		MatSlideToggleModule,
 		FlexLayoutModule
 	],
 	providers: [],

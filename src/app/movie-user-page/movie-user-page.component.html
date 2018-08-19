@@ -1,3 +1,11 @@
-<p>
-  movie-user-page works!
-</p>
+<div class="slide-box">
+  <div class="slides fade" *ngFor="let image of imageList" [ngClass]="image.active?'slide-active':''">
+    <img src={{image.imageUrl}} class="slide-image">
+  </div>
+  <a class="prev" (click)="changeSlideImage('prev')">&#10094;</a>
+  <a class="next" (click)="changeSlideImage('next')">&#10095;</a>
+  <div class="dot-indicator-box">
+    <span class="dot-indicator" *ngFor="let image of imageList;let i = index" [ngClass]="image.active?'dot-indicator-active':''"
+      (click)="setSlide(i)"></span>
+  </div>
+</div>

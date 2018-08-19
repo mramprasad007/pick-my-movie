@@ -1,9 +1,13 @@
 <mat-toolbar color="primary">
-	<span>Application Title</span>
+	<span>Pick My Show</span>
 
 
 	<span class="fill-remaining-space"></span>
 
-	<span>Right Aligned Text</span>
+	<span><section class="example-section">
+			<mat-slide-toggle [checked]="true">
+				Admin
+			</mat-slide-toggle>
+		</section></span>
 </mat-toolbar>
 <app-movie-user-page></app-movie-user-page>
