@@ -6,45 +6,45 @@ import { Injectable } from '@angular/core';
 export class AppService {
 	imageList = [
 		{
-			imageUrl: '../../assets/img/event1.jpg',
+			imageUrl: 'assets/img/event1.jpg',
 			active: true
 		},
 		{
-			imageUrl: '../../assets/img/event2.jpg',
+			imageUrl: 'assets/img/event2.jpg',
 			active: false
 		},
 		{
-			imageUrl: '../../assets/img/event3.jpg',
+			imageUrl: 'assets/img/event3.jpg',
 			active: false
 		}
 	];
 	eventList = [
 		{
-			imageUrl: '../../assets/img/card1.jpg',
+			imageUrl: 'assets/img/card1.jpg',
 			eventHeader: 'Sunburn Festival',
 			eventPlace: 'Chennai',
 			eventTime: 'Jan - Dec'
 		},
 		{
-			imageUrl: '../../assets/img/card2.jpg',
+			imageUrl: 'assets/img/card2.jpg',
 			eventHeader: 'Bay Waatch',
 			eventPlace: 'Chennai',
 			eventTime: 'Jan - Dec'
 		},
 		{
-			imageUrl: '../../assets/img/card3.jpg',
+			imageUrl: 'assets/img/card3.jpg',
 			eventHeader: 'Snow Strom',
 			eventPlace: 'Chennai',
 			eventTime: 'Jan - Dec'
 		},
 		{
-			imageUrl: '../../assets/img/card4.jpg',
+			imageUrl: 'assets/img/card4.jpg',
 			eventHeader: 'Island Camping',
 			eventPlace: 'Chennai',
 			eventTime: 'Jan - Dec'
 		},
 		{
-			imageUrl: '../../assets/img/card5.jpg',
+			imageUrl: 'assets/img/card5.jpg',
 			eventHeader: 'Silver Storm',
 			eventPlace: 'Chennai',
 			eventTime: 'Jan - Dec'

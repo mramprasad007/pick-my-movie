@@ -19,7 +19,7 @@ export class MovieAdminPageComponent implements OnInit {
 		) {
 			this.appService.addEvent({
 				imageUrl:
-					'../../assets/img/card' +
+					'assets/img/card' +
 					(Math.floor(Math.random() * 6) + 1) +
 					'.jpg',
 				eventHeader: this.eventHeader,
