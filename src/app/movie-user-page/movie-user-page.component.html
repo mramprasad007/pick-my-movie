@@ -8,4 +8,28 @@
     <span class="dot-indicator" *ngFor="let image of imageList;let i = index" [ngClass]="image.active?'dot-indicator-active':''"
       (click)="setSlide(i)"></span>
   </div>
+  <div class="search-box">
+    <input type="text" id="search-input" [(ngModel)]="searchText" placeholder="Search Events" title="Search Events">
+  </div>
+</div>
+<div class="events">
+  <div class="event-header">
+    Featured Events</div>
+  <div class="event-header-underline"></div>
+
+  <div class="event-cards-container" fxLayout="row wrap">
+    <div class="event-card" *ngFor="let event of eventList | searchFilter : searchText" fxFlex.lt-md="33" fxFlex="25" fxFlex.gt-md="20">
+      <mat-card>
+
+        <img mat-card-image src={{event.imageUrl}}>
+        <mat-card-content>
+          <h4>
+            {{event.eventHeader}}
+          </h4>
+          <p>{{event.eventPlace}}</p>
+          <p>{{event.eventTime}}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
 </div>

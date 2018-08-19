@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieUserPageComponent implements OnInit {
 	imageList = [];
+	eventList = [];
 	activeImageNo = 0;
+	searchText = '';
 	constructor() {
 		this.imageList = [
 			{
@@ -21,6 +23,38 @@ export class MovieUserPageComponent implements OnInit {
 			{
 				imageUrl: '../../assets/img/event3.jpg',
 				active: false
+			}
+		];
+		this.eventList = [
+			{
+				imageUrl: '../../assets/img/card1.jpg',
+				eventHeader: 'Sunburn Festival',
+				eventPlace: 'Chennai',
+				eventTime: 'Jan - Dec'
+			},
+			{
+				imageUrl: '../../assets/img/card2.jpg',
+				eventHeader: 'Bay Waatch',
+				eventPlace: 'Chennai',
+				eventTime: 'Jan - Dec'
+			},
+			{
+				imageUrl: '../../assets/img/card3.jpg',
+				eventHeader: 'Snow Strom',
+				eventPlace: 'Chennai',
+				eventTime: 'Jan - Dec'
+			},
+			{
+				imageUrl: '../../assets/img/card4.jpg',
+				eventHeader: 'Island Camping',
+				eventPlace: 'Chennai',
+				eventTime: 'Jan - Dec'
+			},
+			{
+				imageUrl: '../../assets/img/card5.jpg',
+				eventHeader: 'Silver Storm',
+				eventPlace: 'Chennai',
+				eventTime: 'Jan - Dec'
 			}
 		];
 	}
@@ -41,6 +75,9 @@ export class MovieUserPageComponent implements OnInit {
 				this.imageList[this.activeImageNo].active = true;
 			}
 		}
+	}
+	onSearchChange(text) {
+		console.log(text);
 	}
 
 	resetActiveSlide() {

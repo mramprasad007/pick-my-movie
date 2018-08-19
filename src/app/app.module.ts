@@ -5,19 +5,28 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MovieUserPageComponent } from './movie-user-page/movie-user-page.component';
 import { MovieAdminPageComponent } from './movie-admin-page/movie-admin-page.component';
-import { MatToolbarModule, MatSlideToggleModule } from '@angular/material';
+import {
+	MatToolbarModule,
+	MatSlideToggleModule,
+	MatCardModule
+} from '@angular/material';
+import { SearchFilterPipe } from './search-filter.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
 	declarations: [
 		AppComponent,
 		MovieUserPageComponent,
-		MovieAdminPageComponent
+		MovieAdminPageComponent,
+		SearchFilterPipe
 	],
 	imports: [
 		BrowserModule,
 		BrowserAnimationsModule,
 		MatToolbarModule,
 		MatSlideToggleModule,
-		FlexLayoutModule
+		MatCardModule,
+		FlexLayoutModule,
+		FormsModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]
