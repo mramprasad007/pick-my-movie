@@ -8,10 +8,13 @@ import { MovieAdminPageComponent } from './movie-admin-page/movie-admin-page.com
 import {
 	MatToolbarModule,
 	MatSlideToggleModule,
-	MatCardModule
+	MatCardModule,
+	MatInputModule,
+	MatButtonModule
 } from '@angular/material';
 import { SearchFilterPipe } from './search-filter.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AppRoutingModule } from './/app-routing.module';
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -26,7 +29,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 		MatSlideToggleModule,
 		MatCardModule,
 		FlexLayoutModule,
-		FormsModule
+		MatButtonModule,
+		FormsModule,
+		MatInputModule,
+		AppRoutingModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

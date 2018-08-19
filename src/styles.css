@@ -10,3 +10,10 @@ body {
 *:focus {
 	outline: none;
 }
+.mat-focused .mat-form-field-label {
+	color: #ff4081 !important;
+}
+
+.mat-form-field-ripple {
+	background-color: #ff4081 !important;
+}

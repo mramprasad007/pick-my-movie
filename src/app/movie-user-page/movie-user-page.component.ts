@@ -1,3 +1,4 @@
+import { AppService } from './../app-service.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,53 +11,9 @@ export class MovieUserPageComponent implements OnInit {
 	eventList = [];
 	activeImageNo = 0;
 	searchText = '';
-	constructor() {
-		this.imageList = [
-			{
-				imageUrl: '../../assets/img/event1.jpg',
-				active: true
-			},
-			{
-				imageUrl: '../../assets/img/event2.jpg',
-				active: false
-			},
-			{
-				imageUrl: '../../assets/img/event3.jpg',
-				active: false
-			}
-		];
-		this.eventList = [
-			{
-				imageUrl: '../../assets/img/card1.jpg',
-				eventHeader: 'Sunburn Festival',
-				eventPlace: 'Chennai',
-				eventTime: 'Jan - Dec'
-			},
-			{
-				imageUrl: '../../assets/img/card2.jpg',
-				eventHeader: 'Bay Waatch',
-				eventPlace: 'Chennai',
-				eventTime: 'Jan - Dec'
-			},
-			{
-				imageUrl: '../../assets/img/card3.jpg',
-				eventHeader: 'Snow Strom',
-				eventPlace: 'Chennai',
-				eventTime: 'Jan - Dec'
-			},
-			{
-				imageUrl: '../../assets/img/card4.jpg',
-				eventHeader: 'Island Camping',
-				eventPlace: 'Chennai',
-				eventTime: 'Jan - Dec'
-			},
-			{
-				imageUrl: '../../assets/img/card5.jpg',
-				eventHeader: 'Silver Storm',
-				eventPlace: 'Chennai',
-				eventTime: 'Jan - Dec'
-			}
-		];
+	constructor(public appService: AppService) {
+		this.imageList = this.appService.getImageList();
+		this.eventList = this.appService.getEventList();
 	}
 
 	ngOnInit() {}

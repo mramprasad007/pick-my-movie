@@ -1,3 +1,50 @@
-<p>
-  movie-admin-page works!
-</p>
+<div class="create-events">
+  <div class="create-event-header">
+    Create Events</div>
+  <div class="create-event-header-underline"></div>
+  <div class="create-event-forms">
+    <form class="create-event-form-cointainer" fxLayout="row warp">
+      <div class="create-event-input" fxFlex.lt-md="100" fxFlex="50" fxFlex.gt-md="33">
+        <mat-form-field>
+          <input matInput placeholder="Event Heading" [(ngModel)]="eventHeader" name="Event Heading">
+        </mat-form-field>
+      </div>
+
+      <div class="create-event-input" fxFlex.lt-md="100" fxFlex="50" fxFlex.gt-md="33">
+        <mat-form-field>
+          <input matInput placeholder="Event Place" [(ngModel)]="eventPlace" name="Event Place">
+        </mat-form-field>
+      </div>
+
+      <div class="create-event-input" fxFlex.lt-md="100" fxFlex="50" fxFlex.gt-md="33">
+        <mat-form-field>
+          <input matInput placeholder="Event Time" [(ngModel)]="eventTime" name="Event Time">
+        </mat-form-field>
+      </div>
+
+    </form>
+    <button class="add-button" mat-raised-button color="accent" (click)="addEvent()">Add Event</button>
+  </div>
+  <div class="events">
+    <div class="event-header">
+      Events</div>
+    <div class="event-header-underline"></div>
+
+    <div class="event-cards-container" fxLayout="row wrap">
+      <div class="event-card" *ngFor="let event of appService.eventList;let i = index;" fxFlex.lt-md="33" fxFlex="25" fxFlex.gt-md="20">
+        <div class="delete-icon" (click)="deleteEvent(i)">X</div>
+        <mat-card>
+
+          <img mat-card-image src={{event.imageUrl}}>
+          <mat-card-content>
+            <h4>
+              {{event.eventHeader}}
+            </h4>
+            <p>{{event.eventPlace}}</p>
+            <p>{{event.eventTime}}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

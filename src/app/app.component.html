@@ -5,9 +5,9 @@
 	<span class="fill-remaining-space"></span>
 
 	<span><section class="example-section">
-			<mat-slide-toggle [checked]="true">
+			<mat-slide-toggle (change)="onChangeToggle($event)" [checked]="false">
 				Admin
 			</mat-slide-toggle>
 		</section></span>
 </mat-toolbar>
-<app-movie-user-page></app-movie-user-page>
+<router-outlet></router-outlet>
